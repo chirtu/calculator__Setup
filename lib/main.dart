@@ -76,7 +76,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey.withOpacity(.7),
+      backgroundColor: Colors.transparent.withOpacity(.7),
       bottomNavigationBar: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -87,7 +87,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               padding: EdgeInsets.all(16.0),
               child: Text(
                 _expression,
-                style: TextStyle(fontSize: 32.0),
+                style:  GoogleFonts.roboto(fontSize: 40.0,color: Colors.white),
               ),
             ),
           ),
@@ -99,8 +99,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 Row(
                   children: [
                     _buildButton('C'),
-                    _buildButton(''),
-                    _buildButton('='),
+                    _buildButton('%'),
                     _buildButton('/'),
                   ],
                 ),
@@ -131,7 +130,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 Row(
                   children: [
                     _buildButton('0'),
-                    _buildButton('+'),
+                    _buildButton('.'),
+                    _buildButton('='),
                   ],
                 ),
               ],
